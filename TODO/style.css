@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #a1c4fd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+#add-btn, .clear {
+  background: #6a11cb;
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#add-btn:hover, .clear:hover {
+  background: #6a11cb;
+}
+
+#task-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-item {
+  background: #f0f4f8;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s;
+}
+
+.task-text {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  background: #ff7e5f;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.actions button.edit {
+  background: #00c6ff;
+}
+
+.actions button.delete {
+  background: #ff6b6b;
+}
+
+.actions button.save {
+  background: #4CAF50;
+}
+
+.actions button:hover {
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
